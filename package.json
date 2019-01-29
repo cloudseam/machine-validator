@@ -1,0 +1,38 @@
+{
+  "name": "@cloudseam/machine-validator",
+  "version": "1.0.0",
+  "description": "Machine spec validator",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon --signal SIGINT -e js,yml --watch $MACHINE_SPEC_DIR --watch src --watch spec --exec \"concurrently npm:prettify npm:test\"",
+    "prettify": "prettier -l --write \"**/*.js\"",
+    "test": "jasmine"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "jasmine": "3.2.0",
+    "jasmine-expect": "^4.0.0",
+    "nodemon": "1.18.7",
+    "prettier": "1.15.2"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "joi": "^14.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudseam/validator.git"
+  },
+  "author": "Cloudseam Team",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cloudseam/validator/issues"
+  },
+  "homepage": "https://github.com/cloudseam/validator#readme"
+}
