@@ -79,6 +79,7 @@ async function versionOneSchemaValidator(machineData) {
         executor: Joi.string().valid('lambda'),
         config: Joi.object({
             name: Joi.string().required(),
+            args: Joi.object().optional(),
         }),
     });
 

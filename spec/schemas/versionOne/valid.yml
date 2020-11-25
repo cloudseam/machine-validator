@@ -194,3 +194,5 @@ tasks:
     executor: lambda
     config:
       name: db-destroy
+      args:
+        task: destroy
